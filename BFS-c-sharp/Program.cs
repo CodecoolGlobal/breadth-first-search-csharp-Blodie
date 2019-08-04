@@ -11,12 +11,19 @@ namespace BFS_c_sharp
             RandomDataGenerator generator = new RandomDataGenerator();
             List<UserNode> users = generator.Generate();
 
-            foreach (var user in users)
+            Console.WriteLine(users[0].MinDistanceFrom(users[2]));
+            Console.WriteLine(users[0].FriendsAtDistance(2).Count);
+            foreach (var user in users[0].FriendsAtDistance(2))
             {
                 Console.WriteLine(user);
             }
 
-            Console.WriteLine("Done");
+            //foreach (var user in users)
+            //{
+            //    Console.WriteLine(user);
+            //}
+
+            //Console.WriteLine("Done");
             Console.ReadKey();
         }
     }
